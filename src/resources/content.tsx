@@ -2,20 +2,20 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Nikolai",
+  lastName: "Skor",
+  name: `Nikolai Skor`,
+  role: "Webutvikler & Gründer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "nikolai@norvalt.no",
+  location: "Europe/Oslo", // Hønefoss, Norway
+  languages: ["Norsk", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false, // Kan skrus på senere
+  title: <>Abonner på nyhetsbrev</>,
+  description: <>Tips om nettsider, SEO og digital vekst for lokale bedrifter</>,
 };
 
 const social: Social = [
@@ -25,25 +25,19 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/nikolaskor",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/nikolaiskor/",
     essential: true,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "X",
+    icon: "x",
+    link: "https://x.com/nikolaiskor",
     essential: true,
   },
   {
@@ -57,35 +51,35 @@ const social: Social = [
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  label: "Hjem",
+  title: `${person.name} - Webutvikler`,
+  description: `Nettsider som faktisk rangerer. Ekte kode, ikke Wix-rot.`,
+  headline: <>Nettsider som faktisk rangerer</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Arven Honning</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Siste prosjekt
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/arven-honning",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Jeg er Nikolai, webutvikler og gründer av <Text as="span" size="xl" weight="strong">Norvalt</Text>. Jeg lager raske, <br /> SEO-optimerte nettsider for lokale bedrifter. Ekte kode, ikke Wix-rot.
 </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Om meg",
+  title: `Om – ${person.name}`,
+  description: `Møt ${person.name}, ${person.role} fra Hønefoss`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -95,59 +89,44 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/nikolaiskor", // TODO: Sett opp Cal.com
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Introduksjon",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Jeg er en webutvikler fra Hønefoss som brenner for å lage nettsider som faktisk fungerer.
+        Mens andre bruker Wix og Framer, bygger jeg med ekte kode: raskere lasting, bedre SEO,
+        og full kontroll. Jeg driver også Norvalt, hvor vi hjelper bedrifter med AI og digital utvikling.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Erfaring",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Norvalt",
+        timeframe: "2023 - Nå",
+        role: "Gründer & Daglig leder",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Bygger AI-drevne løsninger og nettsider for lokale bedrifter i Norge.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Utviklet Autolead, en AI-plattform for bilforhandlere.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "USN",
+        timeframe: "2025 - 2026",
+        role: "Universitetslektor",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Kursansvarlig for PRO1000 Praktisk Prosjektstyring ved Universitetet i Sørøst-Norge.
           </>,
         ],
         images: [],
@@ -155,78 +134,61 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Utdanning",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "MBA",
+        description: <>Executive MBA, pågående.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Tekniske ferdigheter",
     skills: [
       {
-        title: "Figma",
+        title: "Next.js & React",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Moderne webapplikasjoner med server-side rendering og optimal SEO.</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
           {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "React",
+            icon: "react",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
+        images: [],
+      },
+      {
+        title: "Tailwind CSS",
+        description: (
+          <>Rask og responsiv styling som ser bra ut på alle enheter.</>
+        ),
+        tags: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Tailwind",
+            icon: "tailwind",
           },
         ],
+        images: [],
+      },
+      {
+        title: "AI & Automasjon",
+        description: (
+          <>Integrerer AI-verktøy og automatisering for smartere løsninger.</>
+        ),
+        tags: [
+          {
+            name: "OpenAI",
+            icon: "openai",
+          },
+        ],
+        images: [],
       },
     ],
   },
@@ -234,27 +196,27 @@ const about: About = {
 
 const blog: Blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
+  label: "Blogg",
+  title: "Tanker om web og teknologi",
+  description: `Les hva ${person.name} skriver om`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Prosjekter",
+  title: `Prosjekter – ${person.name}`,
+  description: `Nettsider og utviklingsprosjekter av ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  label: "Galleri",
+  title: `Bildegalleri – ${person.name}`,
+  description: `Bilder fra ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
